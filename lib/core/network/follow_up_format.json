@@ -1,0 +1,37 @@
+{
+  "status_code": 201,
+  "success": true,
+  "errors": { "message": "", "error_details": {} },
+  "data": [
+    {
+      "bot_id": "bot_ko_id",
+      "unsynced_messages": [
+        {
+          "role": "assistant",
+          "content": "You are a friend,your name is Katlin Smith. you like hiking and football.",
+          "createdAt": "01-01-2023 11:11:11.123"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello how are you?",
+          "createdAt": "01-01-2023 11:11:11.123"
+        }
+      ]
+    },
+    {
+      "bot_id": "bot_ko_id",
+      "unsynced_messages": [
+        {
+          "role": "assistant",
+          "content": "You are a friend,your name is Katlin Smith. you like hiking and football.",
+          "createdAt": "01-01-2023 11:11:11.123"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello how are you?",
+          "createdAt": "01-01-2023 11:11:11.123"
+        }
+      ]
+    }
+  ]
+}
