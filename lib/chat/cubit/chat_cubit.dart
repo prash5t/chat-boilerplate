@@ -6,7 +6,6 @@ import 'package:chatbot/conversations/cubit/conversationlist_cubit.dart';
 import 'package:chatbot/conversations/data/models/schema_bot_model.dart';
 import 'package:chatbot/conversations/data/repository/conversation_repo.dart';
 import 'package:chatbot/core/utils/schema_helper.dart';
-import 'package:chatbot/core/utils/secure_storage_helper.dart';
 import 'package:chatbot/core/utils/service_locator.dart';
 import 'package:chatbot/core/utils/split_msg_to_list.dart';
 import 'package:chatbot/main_prod.dart';
@@ -21,7 +20,6 @@ part 'chat_state.dart';
 class ChatCubit extends Cubit<ChatState> {
   ChatCubit(this.conversationRepo) : super(ChatLoadingState());
   final ConversationRepo conversationRepo;
-  final SecureStorageHelper secureStorage = SecureStorageHelper();
 
   SchemaHelper schemaHelper = locator<SchemaHelper>();
 //fyi: invoked to load conversation with a bot

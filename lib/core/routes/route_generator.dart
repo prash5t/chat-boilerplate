@@ -3,6 +3,7 @@ import 'package:chatbot/bot_profile/presentation/bot_profile_screen.dart';
 import 'package:chatbot/chat/presentation/chat_screen.dart';
 import 'package:chatbot/conversations/data/models/schema_bot_model.dart';
 import 'package:chatbot/conversations/presentation/choose_new_bot_screen.dart';
+import 'package:chatbot/conversations/presentation/conversation_search_screen.dart';
 import 'package:chatbot/conversations/presentation/conversationslist_screen.dart';
 import 'package:chatbot/core/routes/app_routes.dart';
 import 'package:chatbot/login/presentation/auth_checker_screen.dart';
@@ -48,7 +49,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
               ));
     case AppRoutes.menuScreen:
       return pageRouteBuilder(screen: MenuScreen());
-    // return CupertinoPageRoute(builder: (context) => const MenuScreen());
+    case AppRoutes.conversationSearchScreen:
+      return CupertinoModalPopupRoute(
+          builder: (context) => ConversationSearchScreen(
+                availableBots: argument as List<SchemaBotModel>,
+              ));
     default:
       return CupertinoPageRoute(builder: (context) => const OnboardingScreen());
   }

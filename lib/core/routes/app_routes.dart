@@ -9,4 +9,5 @@ class AppRoutes {
   static const String botProfileScreen = "/bot-profile-screen";
   static const String chooseNewBotScreen = "/choose-new-bot-screens";
   static const String menuScreen = "/menu-screen";
+  static const String conversationSearchScreen = "/conversation-search-screen";
 }

@@ -8,6 +8,12 @@ class SchemaBotModel {
   List<dynamic>? conversations;
   String? lastUpdatedMessagesTs;
   String? lastConversation;
+
+  /// FYI: below two fields are not stored in schema
+  /// they are used while searching conversation, on list tile, we show matched msg
+  /// while searching, so below two fields are used
+  String? matchedMsgWhileSearching;
+  String? matchedMsgWhileSearchingTS;
   bool? isRead;
   SchemaBotModel(
       {this.chatbotId,
@@ -16,6 +22,8 @@ class SchemaBotModel {
       this.conversations,
       this.lastUpdatedMessagesTs,
       this.lastConversation,
+      this.matchedMsgWhileSearching,
+      this.matchedMsgWhileSearchingTS,
       this.isRead});
   static const String kKeyChatBotId = 'chatbotId';
   static const String kKeyPersonaId = 'personaId';
